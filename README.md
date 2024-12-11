@@ -3,8 +3,9 @@
 ## Setup
 
 1. Create a .env file with the PINNACLE_API_KEY environment variable.
-2. Run `go mod tidy`
-3. Run `go run main.go`
+1. Change the `TO` variable to your whitelisted phone number ([whitelist here](https://dashboard.trypinnacle.app/settings/testing)).
+1. Run `go mod tidy`
+1. Run `go run main.go`
 
 You should:
 
