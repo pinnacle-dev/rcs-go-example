@@ -1,0 +1,19 @@
+{
+  "to": "test",
+  "from": "+12345678901",
+  "cards": [
+    {
+      "title": "Hello, world!",
+      "subtitle": "How are you?",
+      "mediaUrl": "https://www.astronomy.com/uploads/2023/10/the-earth.jpg",
+      "buttons": []
+    }
+  ],
+  "quickReplies": [
+    {
+      "title": "Hello!",
+      "payload": "HELLO!",
+      "type": "trigger"
+    }
+  ]
+}
