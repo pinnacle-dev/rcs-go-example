@@ -26,14 +26,17 @@ func NewPinnacleClient(apiKey string) *PinnacleClient {
 	}
 }
 
-var client *PinnacleClient
+var (
+	client *PinnacleClient
+	TO     string = "+12345678901" // Change to your phone number
+)
 
 func send_rcs_media_card() {
 	url := client.baseURL + "/send/rcs"
 
 	payloadData := map[string]interface{}{
 		"from": "test",
-		"to":   "+16287261512",
+		"to":   TO,
 		"cards": []map[string]interface{}{
 			{
 				"title":    "I do!",
@@ -88,7 +91,7 @@ func send_rcs_with_quick_replies() {
 
 	payloadData := map[string]interface{}{
 		"from": "test",
-		"to":   "+16287261512",
+		"to":   TO,
 		"text": "Hello, World!",
 		"quickReplies": []map[string]string{
 			{
@@ -135,7 +138,7 @@ func send_basic_rcs() {
 
 	payloadData := map[string]interface{}{
 		"from": "test",
-		"to":   "+16287261512",
+		"to":   TO,
 		"text": "...",
 	}
 
@@ -166,11 +169,10 @@ func send_basic_rcs() {
 }
 
 func say_hi_back() {
-	// Send a simple "Hi" response
 	url := client.baseURL + "/send/rcs"
 	payloadData := map[string]interface{}{
 		"from": "test",
-		"to":   "+16287261512",
+		"to":   TO,
 		"text": "Hi! 👋",
 		"quickReplies": []map[string]string{
 			{
